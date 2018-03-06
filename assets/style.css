@@ -11,36 +11,35 @@ body {
     
     /* float: left; */
 }
-.hulkL {
-    width:25%;
+.colL {
+    width:30%;
     position: relative;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     z-index: 2;
     border-radius: 30%;
+    margin-left:-20%;
 }
 
-.hulkR {
-    width:25%;
+.colR {
+    width:30%;
     position: relative;
     border-style: solid;
     border-color: white;
     border-width: 1px;
     z-index: 2;
     border-radius: 30%;
+    margin-left:20%;
 }
 
-.bW {
-    
-}
 
-.hulkL:hover {
+.colL:hover {
     /* transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     /* transform: rotate(30deg); */ 
     transform : rotate(30deg) scale(1.5);
 }
-.hulkR:hover {
-    transform: rotate(30deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.colR:hover {
+    transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     
 }
