@@ -1,3 +1,4 @@
+
 :root {
 --TricornBlack: #2d2d2e;
 --Inkwell: #2f3338;
@@ -17,4 +18,50 @@
 --LustyRed: #A24141;
 --Nugget: #D4B05C;
 --JargonJade: #68A190;
+--background-color:rgb(12,14,11)
+
+body {
+    var(--background-color);
+}
+
+.aLogo {
+    height:100%;
+    width:100%;
+    z-index: -1;
+    position: absolute;
+ 
+    
+    /* float: left; */
+}
+.colL {
+    width:30%;
+    position: relative;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    z-index: 2;
+    border-radius: 30%;
+    margin-left:-20%;
+}
+
+.colR {
+    width:30%;
+    position: relative;
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    z-index: 2;
+    border-radius: 30%;
+    margin-left:20%;
+}
+
+
+.colL:hover {
+    /* transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    /* transform: rotate(30deg); */ 
+    transform : rotate(30deg) scale(1.5);
+}
+.colR:hover {
+    transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    
 }
