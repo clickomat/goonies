@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-
+alert("ur good");
     // 6 character
     // Huklk, ironman, captain america, hawkeye, thor, black widdow
 
@@ -17,7 +17,9 @@ $(document).ready(function () {
 
     $(".char").on("click", "img", function () {
 
-        ß
+        characterName = $(this).data("name")
+        console.log(characterName);
+        
         $.ajax({
             url: marvelQueryURL,
             method: 'GET'
@@ -31,6 +33,7 @@ $(document).ready(function () {
             method: 'GET'
         }).then(function (response) {
             console.log(response);
+
         });
 
     })
