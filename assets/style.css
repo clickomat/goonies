@@ -1,77 +1,55 @@
-
-:root {
-    --TricornBlack: #2d2d2e;
-    --Inkwell: #2f3338;
-    --RookwoodDarkRed: #462B2A;
-    --GraysHarbor: #5B6267;
-    --OperaGlass: #E8F1EC;
-    --Heartthrob: #9A3838;
-    --PowderBlue: #8FA3AC;
-    --Rosette: #CFA694;
-    --WondrousBlue: #BCCDDB;
-    --Biscay: #499D9E;
-    --LaurelWoods: #45483E;
-    --GrayMatters: #A7A8A3;
-    --OlympusWhite: #D5D8D7;
-    --RuralGreen: #8B8354;
-    --Afternoon: #F3CC84;
-    --LustyRed: #A24141;
-    --Nugget: #D4B05C;
-    --JargonJade: #68A190;
-    --background-color:rgb(12,14,11)
-
-    
-
-
-
-
-body {
-    var(--background-color);
-
-}
-
 .aLogo {
-    height:100%;
-    width:100%;
-    z-index: -1;
-    position: absolute;
- 
-    
-    /* float: left; */
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+
+  /* float: left; */
 }
 .colL {
-    width:35%;
-    position: relative;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    z-index: 2;
-    border-radius: 30%;
-    margin-left:-20%;
+  width: 35%;
+  position: relative;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  z-index: 2;
+  border-radius: 30%;
+  margin-left: -20%;
 }
 
 .colR {
-    width:35%;
-    position: relative;
-    border-style: solid;
-    border-color: white;
-    border-width: 1px;
-    z-index: 2;
-    border-radius: 30%;
-    margin-left:20%;
+  width: 35%;
+  position: relative;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  z-index: 2;
+  border-radius: 30%;
+  margin-left: 20%;
 }
 
-.char:hover{
-    border-color: red;
+.char:hover {
+  border-color: red;
 }
 .colL:hover {
-    /* transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    /* transform: rotate(30deg); */ 
-    transform : rotate(30deg) scale(1.5);
+  /* transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  /* transform: rotate(30deg); */
+  transform: rotate(30deg) scale(1.5);
 }
 .colR:hover {
-    transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}}
-.gooniesBG{
-   background: url("./assets/images/gooniesBG.jpeg")
+  transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
+.prod {
+  width: 9em;
+  position: relative;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px;
+  z-index: 2;
+  border-radius: 30%;
+  margin-left: -20%;
+}
+.prod:hover {
+  width: 12em;
+}
+
