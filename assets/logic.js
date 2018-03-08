@@ -40,7 +40,7 @@ $(document).ready(function () {
         characterName = $(this).attr("data-name");
         console.log(characterName);
         
-        var OMDBQueryURL = "http://www.omdbapi.com/?s=" + characterName + "&year=2008&apikey=f367c400";
+        var OMDBQueryURL = "https://www.omdbapi.com/?s=" + characterName + "&year=2008&apikey=f367c400";
          console.log(OMDBQueryURL);
 
         //AJAX Call
@@ -110,8 +110,8 @@ $(document).ready(function () {
 ////
 
 
-          var imdbIDQueryURL = "http://www.omdbapi.com/?i="+imdbID+"&plot=full&apikey=f367c400";
-            // var imdbIDQueryURL = "http://www.omdbapi.com/?i=" + imdbID + "&plot=full&apikey=f367c400";
+          var imdbIDQueryURL = "https://www.omdbapi.com/?i="+imdbID+"&plot=full&apikey=f367c400";
+            // var imdbIDQueryURL = "https://www.omdbapi.com/?i=" + imdbID + "&plot=full&apikey=f367c400";
             // console.log(imdbIDQueryURL);
 
 
