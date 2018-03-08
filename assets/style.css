@@ -20,30 +20,10 @@
     --JargonJade: #68A190;
     --background-color:rgb(12,14,11)
 
-    var(--background-color);
     
 
 
-:root {
---TricornBlack: #2d2d2e;
---Inkwell: #2f3338;
---RookwoodDarkRed: #462B2A;
---GraysHarbor: #5B6267;
---OperaGlass: #E8F1EC;
---Heartthrob: #9A3838;
---PowderBlue: #8FA3AC;
---Rosette: #CFA694;
---WondrousBlue: #BCCDDB;
---Biscay: #499D9E;
---LaurelWoods: #45483E;
---GrayMatters: #A7A8A3;
---OlympusWhite: #D5D8D7;
---RuralGreen: #8B8354;
---Afternoon: #F3CC84;
---LustyRed: #A24141;
---Nugget: #D4B05C;
---JargonJade: #68A190;
---background-color:rgb(12,14,11)
+
 
 body {
     var(--background-color);
@@ -91,5 +71,7 @@ body {
 }
 .colR:hover {
     transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    
+}}
+.gooniesBG{
+   background: url("./assets/images/gooniesBG.jpeg")
 }
