@@ -1,0 +1,98 @@
+/* Setting Up Downloaded Fonts */
+@font-face {
+    font-family: 'comic_bookitalic';
+    src: url('./fonts/comic_book_italic-webfont.woff2') format('woff2'),
+         url('.fonts/comic_book_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'avengeance_heroic_avengerIt';
+    src: url('./fonts/avengeance_heroic_avenger_at-webfont.woff2') format('woff2'),
+         url('./fonts/avengeance_heroic_avenger_at-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Whole Body */
+body {
+    background-color: #2d2d2e;
+}
+
+/* Title Row */
+.title {
+    border-bottom: solid #E5C85F;
+}
+ #charImage {
+     height: 100%;
+ }
+ .cartoon {
+    max-width: 100%;
+ }
+#CharacterName {
+    font-family: 'avengeance_heroic_avengerIt';
+    font-size: 100px;
+    color: #9A3838;
+    text-align: center;
+    line-height: 100%;
+}
+.homebutton {
+    height: 100%;
+}
+.BackToHome {
+    max-width: 100%;
+}
+
+/* All Character Content */
+.sectionTitle {
+    font-family: 'avengeance_heroic_avengerIt';
+    color: #2d2d2e;
+}
+.text {
+    color: #E8F1EC;
+    font-family: 'comic_bookitalic';
+}
+hr {
+    border-color: #2d2d2e;
+}
+
+/* Comic Books Section */
+.comicbooks {
+    background-color: #E5C85F;
+}
+
+/* Character Bio Section */
+.bio {
+    background-color: #427085;
+}
+
+/* Movie Info Section */
+.info {
+    background-color: #9A3838;
+}
+.mini {
+    border-color: #E8F1EC;
+}
+h4 {
+    color: #E8F1EC;
+    font-family: 'comic_bookitalic';
+    text-align: center;
+}
+h5 {
+    color: #E8F1EC;
+    text-align: center;
+    font-family: 'comic_bookitalic';
+}
+
+/* Spotify Section */
+.spotify {
+    background-color: #6AD270;
+}
+
+/* Footer */
+.footer-copyright {
+    text-align: center;
+    color: #E8F1EC;
+    font-family: 'avengeance_heroic_avengerIt';
+    letter-spacing: 2px;
+}
