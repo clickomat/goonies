@@ -121,3 +121,7 @@ h5 {
     font-family: 'avengeance_heroic_avengerIt';
     letter-spacing: 2px;
 }
+
+.invisible {
+    display: none;
+}
