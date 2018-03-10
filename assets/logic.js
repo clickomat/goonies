@@ -150,16 +150,19 @@ $(document).ready(function () {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=clint-barton&resources=character";
         }
         else if (characterName === "iron-man") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+            var comicVineQueryURL = "http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
         }
         else if (characterName === "thor") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+            var comicVineQueryURL = "http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
         }
         
 
         $.ajax({
             url: comicVineQueryURL,
-            method: 'GET'
+            method: 'GET',
+            crossDomain: true,
+            dataType: 'jsonp',
+            beforeSend: setHeader
         }).then(function (response) {
             console.log(response);
 
