@@ -161,8 +161,7 @@ $(document).ready(function () {
             url: comicVineQueryURL,
             method: 'GET',
             crossDomain: true,
-            dataType: 'jsonp',
-            beforeSend: setHeader
+            dataType: 'json'
         }).then(function (response) {
             console.log(response);
 
