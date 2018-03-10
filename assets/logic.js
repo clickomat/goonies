@@ -126,7 +126,7 @@ $(document).ready(function () {
             });
 
             console.log(marvelCharacterName);
-            var marvelQueryURL = "https://clickomat.github.io/goonies/:443/v1/public/characters?nameStartsWith=hulk&apikey=ded1811505155fd04255b903b7f0378a";
+            var marvelQueryURL = "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=hulk&apikey=ded1811505155fd04255b903b7f0378a";
 
         $.ajax({
             url: marvelQueryURL,
