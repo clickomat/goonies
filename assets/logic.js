@@ -35,12 +35,12 @@ $(document).ready(function () {
 
 
 
-    $(".char").on("click", function () {  
+    $(".circle").on("click", function () {  
         
         characterName = $(this).attr("data-name");
         console.log(characterName);
         
-        if (characterName === "blackWiddow") {
+        if (characterName === "blackWidow") {
             characterName = "avengers_infinity_war";
             
         }
@@ -86,12 +86,11 @@ $(document).ready(function () {
             console.log(response.Search[x].Year)
             console.log(convertedYear, "==", yearIntArr[yearIntArr.length-1])
             if (convertedYear == yearIntArr[yearIntArr.length-1]) {
-                if (characterName === "hawkeye" || characterName === "blackWiddow" || characterName === "avengers_infinity_war") {
+                if (characterName === "hawkeye" || characterName === "blackWidow" || characterName === "avengers_infinity_war") {
                     imdbID = "tt4154756";
                 } else {
                      imdbID = response.Search[x].imdbID;
                 console.log("imbd", imdbID);
-         
                 }
                
             } else {
@@ -138,7 +137,7 @@ $(document).ready(function () {
             });
 
             console.log(marvelCharacterName);
-        if (characterName === "blackWiddow") {
+        if (characterName === "blackWidow") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=natasha-romanoff&resources=character";
         }
         else if (characterName === "captain-america") {
