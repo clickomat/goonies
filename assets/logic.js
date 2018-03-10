@@ -156,12 +156,18 @@ $(document).ready(function () {
             var comicVineQueryURL = "http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
         }
         
+            var script = document.createElement('script');
+
+            script.src = 'http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character';
+            var thisthing = document.getElementsByTagName('head')[0].appendChild(script);
+            console.log(toString(thisthing));
 
         $.ajax({
             url: comicVineQueryURL,
             method: 'GET',
+            jsonp: "callback",
             crossDomain: true,
-            dataType: 'json'
+            dataType: 'jsonp'
         }).then(function (response) {
             console.log(response);
 
