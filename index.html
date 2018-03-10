@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+<div id="homePG">
     <img src=".\assets\images\A_logo.jpg" alt="Avengers Logo" class="aLogo responsive-img">
 
     <div class="container firstBackground">
@@ -99,7 +99,7 @@
                 <div>
                     <br>
                     <br>
-                    <img src="./assets/images/movie_Posters/blackWidow.jpg" alt="Marvel black widow" class="colR blackW char responsive-img" id="blackWiddowImg" data-name="black widdow">
+                    <img src="./assets/images/movie_Posters/blackWidow.jpg" alt="Marvel black widow" class="colR blackW char responsive-img" id="blackWiddowImg" data-name="blackWiddow">
                 </div>
                 <!-- remove this when done -->
                 <p style="color:white; margin-left:10%">id = "blackW" </p>
@@ -107,6 +107,82 @@
         </div>
        
     </div>
+</div>
+<!-- start -->
+<div id="charPG" class="invisible">
+    <!-- container of all content -->
+    <div class="container">
+        <!-- First row containg name and picture -->
+        <div class="row">
+            <!-- Character Image -->
+            <div class="col s2 card-panel grey hoverable">
+                <h1>img</h1>
+            </div>
+            <!-- Character Name -->
+            <div class="col s8 card-panel teal hoverable">
+                <h1>Character Name</h1>
+            </div>
+            <!-- Go Back to HomePage -->
+            <div class="col s2 card-panel grey hoverable">
+                <h1>home</h1>
+            </div>
+        </div>
+        <!-- Second row containing Comics, Bio and Movie Info -->
+        <div class="row">
+            <!-- Sidebar with Comic Links -->
+            <div class="col s4 card-panel yellow hoverable">
+                <h3>Most Recent Comics</h3>
+                <div id="comiclinks">
+                    <!-- Javascript Populates Links here -->
+                    <p>id="comiclinks"</p>
+                </div>
+            </div>
+            <!-- Main Section with Character Bio and Movie Info -->
+            <div class="col s8">
+                <!-- Character Bio Row -->
+                <div class="row card-panel red hoverable">
+                    <h4>Character Bio</h4>
+                    <div id="bio">
+                        <p>id="bio"</p>
+                    </div>
+                </div>
+                <!-- Movie Info Row -->
+                <div class="row card-panel blue hoverable">
+                    <h4>Movie Info</h4>
+                    <div id="info">
+                        <p>id="info"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Third row containing Movie Ratings and Spotify Playlists -->
+        <div class="row">
+            <!--Movie Ratings Row -->
+            <div class="col s4 card-panel green hoverable">
+                <h3>Movie Ratings</h3>
+                <div id="ratings">
+                    <p>id="ratings"</p>
+                </div>
+            </div>
+            <!-- Spotify Playlist Row -->
+            <div class="col s8 card-panel purple hoverable">
+                <h4>Spotify Playlist</h4>
+                <div id="playlist">
+                    <p>id="playlist"</p>
+                </div>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    </div>
+    <div class="footer-copyright orange">
+        Data provided by Marvel. © 2014 Marvel
+    </div>
+</div>
+<!-- end -->
 
     <!-- Link to jQuery -->
     <script src="./assets/jquery-3.3.1.min.js"></script>

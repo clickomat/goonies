@@ -21,7 +21,7 @@
     --background-color:rgb(12,14,11)
 
     var(--background-color);
-    
+}
 
 
 :root {
@@ -44,6 +44,7 @@
 --Nugget: #D4B05C;
 --JargonJade: #68A190;
 --background-color:rgb(12,14,11)
+}
 
 body {
     var(--background-color);
@@ -92,4 +93,15 @@ body {
 .colR:hover {
     transform: rotate(330deg) scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
     
+}
+#homePG {
+    
+}
+
+#charPG {
+  
+}
+
+.invisible {
+    display:none;
 }
