@@ -28,7 +28,6 @@ body {
  }
  .cartoon {
     max-width: 100%;
-     max-height: 100%;
  }
 #CharacterName {
     font-family: 'avengeance_heroic_avengerIt';
@@ -42,7 +41,6 @@ body {
 }
 .BackToHome {
     max-width: 100%;
-    max-height: 100%;
 }
 
 /* All Character Content */
