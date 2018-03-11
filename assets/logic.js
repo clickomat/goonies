@@ -126,13 +126,10 @@ $(document).ready(function () {
                 console.log(imdbIDQueryURL);
                 console.log(response2);
 
-                var movieInfo = $("<div>");
-                movieInfo.append("<p>title:" + response2.Title + "</p>")
-                movieInfo.append("<p>released:" + response2.Released + "</p>")
-                movieInfo.append("<p>ratings:" + movieRating + "</p>")
-                movieInfo.append("<p>plot:" + response2.Plot + "</p>")
-                $("#info").append(movieInfo);
-
+                $("#currentMovieTitle").text(response2.Title);
+                $("#currentMovieRelease").text(response2.Released);
+                $("#currentMovieRating").text(movieRating);
+                $("#currentMoviePlot").text(response2.Plot);
 
             });
 
