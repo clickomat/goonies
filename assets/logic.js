@@ -156,18 +156,22 @@ $(document).ready(function () {
             $("#characterName").text("Hawkeye");
         }
         else if (characterName === "iron-man") {
+
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
             $("#characterName").text("Iron Man");
         }
         else if (characterName === "thor") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
             $("#characterName").text("Thor");
+
         }
         
 
         $.ajax({
             url: comicVineQueryURL,
-            method: 'GET'
+            method: 'GET',
+            crossDomain: true,
+            dataType: 'json'
         }).then(function (response) {
             console.log(response);
 
