@@ -5,157 +5,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Marvel API</title>
+    <title>Avengers Assembler</title>
 
     <link rel="stylesheet" href="assets/materialize/materialize/css/materialize.min.css">
-    <link rel="stylesheet" href="assets/style.css">
 
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<body>
 
-    <img src="./assets/images/A_logo.jpg" alt="Avengers Logo" class="aLogo responsive-img">
-
-    <div class="container firstBackground">
-        <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+<body class="mainBody">
+<div id="homePG">
+    <header class="mdl-mini-header">
+        <br>
+        <br>
+        <br>
+    </header>
+    <div class="container ">
         <div class="row">
-            <!-- empty col for spacing -->
-            <div class="col s4 m2">
-
-            </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/CaptainAmerica.html">
-                        <img src="./assets/images/movie_Posters/cptAmerica.jpg" alt="Marvel Captain America" class="colL cptA char responsive-img"
-                            id="captainAmericaImage" data-name="captain-america">
-                    </a>
+            <div class="col s3 column">
+                <div class="row">
+                    <div class="col s6">
+                        <!-- Empty Div -->
+                    </div>
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonCaptain.jpg" class="responsive-img circle" id="captainAmericaImage" data-name="captain-america">
+                    </div>
                 </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:-20%">id = "cptA" </p>
-                <!-- remove above when done -->
-            </div>
-            <!-- empty col for spacing -->
-            <div class="col s8 m4">
-
-            </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/Hulk.html">
-                        <img src="./assets/images/movie_Posters/Hulk.jpg" alt="Marvel Hulk" class="colR hulk char responsive-img" id="hulkImg" data-name="hulk">
-                    </a>
+                <div class="row">
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonHawkeye.jpg" class="responsive-img circle" id="hawkEyeImg" data-name="hawkeye">
+                    </div>
+                    <div class="col s6">
+                        <!-- Empty Div -->
+                    </div>
                 </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:10%">id = "hulk" </p>
-            </div>
-
-        </div>
-
-        <div class="row">
-            <!-- empty col for spacing -->
-            <div class="col s4 m2">
-
-            </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/Hawkeye.html">
-                        <img src="./assets/images/movie_Posters/hawkEye.jpg" alt="Marvel hawkEye" class="colL hawkEye char responsive-img" id="hawkEyeImg"
-                            data-name="hawkeye">
-                    </a>
+                <div class="row">
+                    <div class="col s6">
+                        <!--Empty Div -->
+                    </div>
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonThor.jpg" class="responsive-img circle" id="thorImg" data-name="thor">
+                    </div>
                 </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:-20%">id = "hawkEye" </p>
             </div>
-            <!-- empty col for spacing -->
-            <div class="col s8 m4">
-
+            <div class="col s6 column">
+                <img src="./assets/images/avengersGraphic.png" alt="Avengers Logo" class="responsive-img avengersLogo center">
             </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/IronMan.html">
-                        <img src="./assets/images/movie_Posters/ironMan.jpg" alt="Marvel Ironman" class="colR ironMan char responsive-img" id="ironManImg"
-                            data-name="iron-man">
-                    </a>
+            <div class="col s3 column">
+                <div class="row">
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonHulk.jpg" class="responsive-img circle" id="hulkImg" data-name="hulk">
+                    </div>
+                    <div class="col s6">
+                        <!-- Empty Div -->
+                    </div>
                 </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:10%">id = "ironMan" </p>
+                <div class="row">
+                    <div class="col s6">
+                        <!-- Empty Div -->
+                    </div>
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonBlackWidow.jpg" class="responsive-img circle" id="blackWidowImg" data-name="blackWidow">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s6">
+                        <img src="./assets/images/CartoonIronMan.jpg" class="responsive-img circle" id="ironManImg" data-name="iron-man">
+                    </div>
+                    <div class="col s6">
+                        <!-- Empty Div -->
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Columns are always 50% wide, on mobile and desktop -->
-        <div class="row">
-            <!-- empty col for spacing -->
-            <div class="col s4 m2">
-
-            </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/Thor.html">
-                        <img src="./assets/images/movie_Posters/thor.jpg" alt="Marvel thor" class="colL thor char responsive-img" id="thorImg" data-name="thor">
-                    </a>
-                </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:-20%">id = "thor" </p>
-            </div>
-            <!-- empty col for spacing -->
-            <div class="col s8 m4">
-
-            </div>
-            <div class="col s6 m3">
-                <div>
-                    <br>
-                    <br>
-                    <a href="./CharacterPages/BlackWidow.html">
-                        <img src="./assets/images/movie_Posters/blackWidow.jpg" alt="Marvel black widow" class="colR blackW char responsive-img"
-                            id="blackWiddowImg" data-name="black widdow">
-                    </a>
-                </div>
-                <!-- remove this when done -->
-                <p style="color:white; margin-left:10%">id = "blackW" </p>
-                <!-- additional comment so I can put this up to git hub and see if I can fix the style issue when pulled -->
-            </div>
-        </div>
-
+        <a href="production.html">
+            <img src="./assets/images/goonies.png" alt="goonies link" style="height:2em;" id="dTeam">
+          </a>
 
     </div>
-<div>
-    <footer class="mdl-mini-footer">
-        <div class="mdl-mini-footer__left-section">
-           
-            <ul class="mdl-mini-footer__link-list">
-
-                <li>
-                    <a href="production.html">
-                        <img src="./assets/images/goonines.png" alt="goonies link" href="production.html" style="height:4em;">
-                    </a>
-                </li>
-                <li>
-                    <div class="footer-copyright orange">
-                        Data provided by
-                        <a href="https://developer.marvel.com/">Marvel. © 2014 Marvel</a>
-                    </div>
-
-                </li>
-            </ul>
+</div>
+<!-- start -->
+<div id="charPG" class="invisible">
+    <!-- container of all content -->
+    <div class="container">
+        <!-- Title row containg name and picture -->
+        <div class="row title">
+            <!-- Character Image -->
+            <div class="col s6 m3 l2 hoverable responsive-img" id="charImage">
+                <img src="../assets/images/CartoonCaptain.jpg" alt="Cartoon Captain America" class="cartoon">
+            </div>
+            <!-- Go Back to HomePage Image-->
+            <div class="col s6 m3 l2 push-l8 hoverable responsive-img" class="homebutton">
+                <img src="../assets/images/avengersGraphic.png" alt="Avengers Home Button" class="BackToHome">
+            </div>
+            <!-- Character Name -->
+            <div class="col s12 l8 pull-l2">
+                <h1 id="characterName">Captain America</h1>
+            </div>
         </div>
-    </footer>
+        <!-- First row containing Comics & Bio-->
+        <div class="row">
+            <!-- Column with Character Bio-->
+            <div class="col s12 m12 l8">
+                <!-- Character Bio Row -->
+                <div class="row card-panel bio">
+                    <!-- Title -->
+                    <h3 class="sectionTitle">Character Bio</h4>
+                        <hr>
+                        <!-- Section Info -->
+                        <div id="bio">
+                            <p class="text">This is a fake bio for the Goonies Group Project. It is being used just to style the text and div
+                                it is placed in. This is a fake bio for the Goonies Group Project. It is being used just to style
+                                the text and div it is placed in. This is a fake bio for the Goonies Group Project. It is being
+                                used just to style the text and div it is...
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <!-- Column with Comic Links -->
+            <div class="col s12 m12 l4">
+                <!-- Comic Links Row -->
+                <div class="row card-panel comicbooks">
+                    <!-- Title -->
+                    <h3 class="sectionTitle">Recent Comics</h3>
+                    <hr>
+                    <!-- Section Info -->
+                    <div id="comiclinks">
+                        <!-- Javascript Populates Links here -->
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Second Row containing Movie Info-->
+        <div class="row">
+            <!-- Movie Info Title Row -->
+            <div class="row card-panel info">
+                <!-- Movie Info Title -->
+                <div class="col s12">
+                    <h3 class="sectionTitle">Most Recent Character Movie</h4>
+                        <hr>
+                </div>
+            </div>
+            <!-- Movie Info First Section -->
+            <div class="row card-panel info">
+                <!-- Title -->
+                <div class="col s12 m12 l4">
+                    <h4>Title</h4>
+                    <hr class="mini">
+                    <h5 id="currentMovieTitle">Captain America: Civil War</h5>
+                </div>
+                <!-- Release Date -->
+                <div class="col s12 m6 l4">
+                    <h4>Release Date</h4>
+                    <hr class="mini">
+                    <h5 id="currentMovieRelease">06 May 2016</h5>
+                </div>
+                <!-- Rating -->
+                <div class="col s12 m6 l4">
+                    <h4>Rating</h4>
+                    <hr class="mini">
+                    <h5 id="currentMovieRating">7.5/10</h5>
+                </div>
+            </div>
+            <!-- Movie Info Plot Section -->
+            <div class="row card-panel info">
+                <!-- Plot Title -->
+                <div class="col s12">
+                    <h4>Plot</h4>
+                    <hr class="mini">
+                    <!-- Plot -->
+                    <p class="text" id="currentMoviePlot">"With many people fearing the actions of super heroes, the government decides to push for the Hero Registration
+                        Act, a law that limits a hero's actions. This results in a division in The Avengers. Iron Man stands
+                        with this Act, claiming that their actions must be kept in check otherwise cities will continue to be
+                        destroyed, but Captain America feels that saving the world is daring enough and that they cannot rely
+                        on the government to protect the world. This escalates into an all-out war between Team Iron Man (Iron
+                        Man, Black Panther, Vision, Black Widow, War Machine, and Spider-Man) and Team Captain America (Captain
+                        America, Bucky Barnes, Falcon, Scarlet Witch, Hawkeye, and Ant Man) while a new villain emerges."</p>
+                </div>
+            </div>
+        </div>
+        <!-- Third row containing the Spotify Playlist-->
+        <div class="row card-panel spotify">
+            <!-- Spotify Playlist Row -->
+            <div class="col s12">
+                <h3 class="sectionTitle">The Marvel Soundtrack</h4>
+                    <hr>
+                    <div id="playlist">
+                        <iframe src="https://open.spotify.com/embed/user/trooper_vb/playlist/5fXhjLBTAn5ZPXWLsNvu1O" width="100%" height="380" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer-copyright">
+        Data provided by Marvel. © 2014 Marvel
+    </div>
+</div>
+<!-- end -->
+
 
     <!-- Link to jQuery -->
     <script src="./assets/jquery-3.3.1.min.js"></script>
     <!-- Link to JavaScript file -->
     <script src="./assets/logic.js"></script>
-</div>
-
 </body>
 
 </html>
