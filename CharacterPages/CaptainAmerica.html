@@ -1,83 +1,146 @@
 <!DOCTYPE html>
-  <html>
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <!--Import materialize.css-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<html>
 
-      <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    </head>
+<head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Link to CSS stylesheet-->
+    <link rel="stylesheet" href="../assets/css/captain.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-    <body>
-      <!-- container of all content -->
-      <div class="container">
-        <!-- First row containg name and picture -->
-         <div class="row">
-             <!-- Character Image -->
-            <div class="col s2 card-panel grey hoverable"><h1>img</h1></div>
+<body>
+    <!-- container of all content -->
+    <div class="container">
+        <!-- Title row containg name and picture -->
+        <div class="row title">
+            <!-- Character Image -->
+            <div class="col s6 m3 l2 hoverable responsive-img" id="charImage">
+                <img src="../assets/images/CartoonCaptain.jpg" alt="Cartoon Captain America" class="cartoon">
+            </div>
+            <!-- Go Back to HomePage Image-->
+            <div class="col s6 m3 l2 push-l8 hoverable responsive-img" class="homebutton">
+                    <img src="../assets/images/avengersGraphic.png" alt="Avengers Home Button" class="BackToHome">
+            </div>
             <!-- Character Name -->
-            <div class="col s8 card-panel teal hoverable"><h1>Character Name</h1></div>
-            <!-- Go Back to HomePage -->
-            <div class="col s2 card-panel grey hoverable"><h1>home</h1></div>
-        </div>
-        <!-- Second row containing Comics, Bio and Movie Info -->
-        <div class="row">
-            <!-- Sidebar with Comic Links -->
-            <div class="col s4 card-panel yellow hoverable">
-                <h3>Most Recent Comics</h3>
-                <div id="comiclinks">
-                <!-- Javascript Populates Links here -->
-                <p>id="comiclinks"</p>
+            <div class="col s12 l8 pull-l2">
+                    <h1 id="CharacterName">Captain America</h1>
                 </div>
-            </div>
-            <!-- Main Section with Character Bio and Movie Info -->
-            <div class="col s8">
+        </div>
+        <!-- First row containing Comics & Bio-->
+        <div class="row">
+            <!-- Column with Character Bio-->
+            <div class="col s12 m12 l8">
                 <!-- Character Bio Row -->
-                <div class="row card-panel red hoverable">
-                    <h4>Character Bio</h4>
-                    <div id="bio">
-                        <p>id="bio"</p>
+                <div class="row card-panel bio">
+                    <!-- Title -->
+                    <h3 class="sectionTitle">Character Bio</h4>
+                        <hr>
+                        <!-- Section Info -->
+                        <div id="bio">
+                            <p class="text">This is a fake bio for the Goonies Group Project. It is being used just to style the text and
+                                div it is placed in. This is a fake bio for the Goonies Group Project. It is being used just
+                                to style the text and div it is placed in. This is a fake bio for the Goonies Group Project.
+                                It is being used just to style the text and div it is...
+                            </p>
+                        </div>
+                </div>
+            </div>
+            <!-- Column with Comic Links -->
+            <div class="col s12 m12 l4">
+                <!-- Comic Links Row -->
+                <div class="row card-panel comicbooks">
+                    <!-- Title -->
+                    <h3 class="sectionTitle">Recent Comics</h3>
+                    <hr>
+                    <!-- Section Info -->
+                    <div id="comiclinks">
+                        <!-- Javascript Populates Links here -->
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
+                        <br>
+                        <a href="" class="text">Fake Comic Book Link</a>
                     </div>
                 </div>
-                <!-- Movie Info Row -->
-                <div class="row card-panel blue hoverable">
-                    <h4>Movie Info</h4>
-                    <div id="info">
-                        <p>id="info"</p>
-                    </div>
-                </div>
-            </div> 
+            </div>
         </div>
-        <!-- Third row containing Movie Ratings and Spotify Playlists -->
+        <!-- Second Row containing Movie Info-->
         <div class="row">
-            <!--Movie Ratings Row -->
-            <div class="col s4 card-panel green hoverable">
-                <h3>Movie Ratings</h3>
-                <div id="ratings">
-                    <p>id="ratings"</p>
+            <!-- Movie Info Title Row -->
+            <div class="row card-panel info">
+                <!-- Movie Info Title -->
+                <div class="col s12">
+                    <h3 class="sectionTitle">Most Recent Character Movie</h4>
+                        <hr>
                 </div>
             </div>
-            <!-- Spotify Playlist Row -->
-            <div class="col s8 card-panel purple hoverable">
-                <h4>Spotify Playlist</h4>
-                <div id="playlist">
-                    <p>id="playlist"</p>
+            <!-- Movie Info First Section -->
+            <div class="row card-panel info">
+                <!-- Title -->
+                <div class="col s12 m12 l4">
+                    <h4>Title</h4>
+                    <hr class="mini">
+                    <h5>Captain America: Civil War</h5>
+                </div>
+                <!-- Release Date -->
+                <div class="col s12 m6 l4">
+                    <h4>Release Date</h4>
+                    <hr class="mini">
+                    <h5>06 May 2016</h5>
+                </div>
+                <!-- Rating -->
+                <div class="col s12 m6 l4">
+                    <h4>Rating</h4>
+                    <hr class="mini">
+                    <h5>7.5/10</h5>
+                </div>
+            </div>
+            <!-- Movie Info Plot Section -->
+            <div class="row card-panel info">
+                <!-- Plot Title -->
+                <div class="col s12">
+                    <h4>Plot</h4>
+                    <hr class="mini">
+                    <!-- Plot -->
+                    <p class="text">"With many people fearing the actions of super heroes, the government decides to push for the Hero Registration
+                        Act, a law that limits a hero's actions. This results in a division in The Avengers. Iron Man stands
+                        with this Act, claiming that their actions must be kept in check otherwise cities will continue to
+                        be destroyed, but Captain America feels that saving the world is daring enough and that they cannot
+                        rely on the government to protect the world. This escalates into an all-out war between Team Iron
+                        Man (Iron Man, Black Panther, Vision, Black Widow, War Machine, and Spider-Man) and Team Captain
+                        America (Captain America, Bucky Barnes, Falcon, Scarlet Witch, Hawkeye, and Ant Man) while a new
+                        villain emerges."</p>
                 </div>
             </div>
         </div>
-
-
-
-
-
+        <!-- Third row containing the Spotify Playlist-->
+        <div class="row card-panel spotify">
+            <!-- Spotify Playlist Row -->
+            <div class="col s12">
+                <h3 class="sectionTitle">The Marvel Soundtrack</h4>
+                    <hr>
+                    <div id="playlist">
+                        <iframe src="https://open.spotify.com/embed/user/trooper_vb/playlist/5fXhjLBTAn5ZPXWLsNvu1O" width="100%" height="380" frameborder="0"
+                            allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+            </div>
+        </div>
     </div>
-    <div class="footer-copyright orange">
+    <!-- Footer -->
+    <div class="footer-copyright">
         Data provided by Marvel. © 2014 Marvel
     </div>
-      <!--Import jQuery before materialize.js-->
-      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-    </body>
-  </html>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+
+</html>
