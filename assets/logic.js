@@ -39,6 +39,8 @@ $(document).ready(function () {
         
         characterName = $(this).attr("data-name");
         console.log(characterName);
+
+        
         
         if (characterName === "blackWidow") {
             characterName = "avengers_infinity_war";
@@ -126,34 +128,42 @@ $(document).ready(function () {
                 console.log(imdbIDQueryURL);
                 console.log(response2);
 
-                var movieInfo = $("<div>");
-                movieInfo.append("<p>title:" + response2.Title + "</p>")
-                movieInfo.append("<p>released:" + response2.Released + "</p>")
-                movieInfo.append("<p>ratings:" + movieRating + "</p>")
-                movieInfo.append("<p>plot:" + response2.Plot + "</p>")
-                $("#info").append(movieInfo);
-
+                $("#currentMovieTitle").text(response2.Title);
+                $("#currentMovieRelease").text(response2.Released);
+                $("#currentMovieRating").text(movieRating);
+                $("#currentMoviePlot").text(response2.Plot);
+                // $("#characterName").text("characterName");
+                // $("#characterName").html("characterName");
 
             });
 
             console.log(marvelCharacterName);
-        if (characterName === "blackWidow") {
+            if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=natasha-romanoff&resources=character";
+            $("#characterName").text("Black Widow");
+
         }
         else if (characterName === "captain-america") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=steve-rogers&resources=character";
+            $("#characterName").text("Captain America");
         }
         else if (characterName === "hulk") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=bruce-banner&resources=character";
+            $("#characterName").text("The Hulk");
         }
         else if (characterName === "hawkeye") {
             var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=clint-barton&resources=character";
+            $("#characterName").text("Hawkeye");
         }
         else if (characterName === "iron-man") {
-            var comicVineQueryURL = "http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+            $("#characterName").text("Iron Man");
         }
         else if (characterName === "thor") {
-            var comicVineQueryURL = "http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+            $("#characterName").text("Thor");
+
         }
         
             var script = document.createElement('script');
