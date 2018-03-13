@@ -1,4 +1,3 @@
-
 /*Main Page CSS*/
 .container {
     display: table;
@@ -137,19 +136,4 @@ h5 {
 /* goonies link */
 .dTeam{
     margin: 2em;
-}
-/* form on game */
-.playerInfo{
-    color: rgb(235, 63, 63);
-    padding-left: 2em;
-}
-/* iframe game */
-.game{
-   margin-left: 25%
-}
-.score{
-    color: #0A0C09;
-}
-.page-footer{
-    background: #9A3838
 }
