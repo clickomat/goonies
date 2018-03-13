@@ -35,11 +35,18 @@ $(document).ready(function () {
 
 
 
-    $(".char").on("click", function () {  // when adding in "img" or "image" after "click" in the on method breaks the function
+    $(".circle").on("click", function () {  
         
         characterName = $(this).attr("data-name");
         console.log(characterName);
+
         
+        
+        if (characterName === "blackWidow") {
+            characterName = "avengers_infinity_war";
+            
+        }
+
         var OMDBQueryURL = "https://www.omdbapi.com/?s=" + characterName + "&year=2008&apikey=f367c400";
          console.log(OMDBQueryURL);
 
@@ -75,120 +82,104 @@ $(document).ready(function () {
         // ==== looks to find most recent movie's IMDB ID ========
             for (var x = 0; x < response.Search.length; x++) {
             var convertedYear = parseInt(response.Search[x].Year);
-            // console.log('converted year', convertedYear);
-            ///
+           
             var yearAtEnd = yearIntArr[yearIntArr.length - 1]
-            // console.log('CONVERTED YEAR TYPEOF', typeof(convertedYear));
-            // console.log('year at end of array TYPEOF', typeof(yearAtEnd));
-            ///
+            
             console.log(response.Search[x].Year)
             console.log(convertedYear, "==", yearIntArr[yearIntArr.length-1])
             if (convertedYear == yearIntArr[yearIntArr.length-1]) {
-                
-                imdbID = response.Search[x].imdbID;
+                if (characterName === "hawkeye" || characterName === "blackWidow" || characterName === "avengers_infinity_war") {
+                    imdbID = "tt4154756";
+                } else {
+                     imdbID = response.Search[x].imdbID;
                 console.log("imbd", imdbID);
-                // console.log(response.Search[x].imdbID);
+                }
+               
             } else {
                 console.log("error");  
             }
-            // var stringYear = response.Search[x].Year;
-            // console.log('converted year', stringYear);
-            // recentStringYear = toString(yearIntArr[yearIntArr - 1]);
-            // console.log('converted recent year', JSON.stringify(recentStringYear));
-            
-            
-            // if (stringYear == recentStringYear) {
-            //     console.log(response.Search[x].imdbID);
-            //     imdbID = response.Search[x].imdbID;
-            // } else {
-            //     console.log("error");  
-            // }
+       
             
         }
 
-
-////
-
-
           var imdbIDQueryURL = "https://www.omdbapi.com/?i="+imdbID+"&plot=full&apikey=f367c400";
-            // var imdbIDQueryURL = "https://www.omdbapi.com/?i=" + imdbID + "&plot=full&apikey=f367c400";
-            // console.log(imdbIDQueryURL);
-
-
+           
             $.ajax({
                 url: imdbIDQueryURL,
                 method: 'GET'
             }).then(function (response2) {
+                
+                $("#homePG").addClass("invisible");
+                $("#charPG").removeClass("invisible");
+                
+                var movieTitle;
+                var movieReleased;
+                var movieRating;
+                var moviePlot;
+
+                if (response2.Ratings.length == 0) {
+                    movieRating = "Data Unavailable";
+                } else {
+                    movieRating = response2.Ratings[0].Source + " - " + response2.Ratings[0].Value;
+                }
+
                 console.log(imdbID);
 
                 console.log(imdbIDQueryURL);
                 console.log(response2);
+
+                $("#currentMovieTitle").text(response2.Title);
+                $("#currentMovieRelease").text(response2.Released);
+                $("#currentMovieRating").text(movieRating);
+                $("#currentMoviePlot").text(response2.Plot);
+                // $("#characterName").text("characterName");
+                // $("#characterName").html("characterName");
+
             });
 
             console.log(marvelCharacterName);
-            var marvelQueryURL = "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=hulk&apikey=ded1811505155fd04255b903b7f0378a";
+            if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=natasha-romanoff&resources=character";
+            $("#characterName").text("Black Widow");
+
+        }
+        else if (characterName === "captain-america") {
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=steve-rogers&resources=character";
+            $("#characterName").text("Captain America");
+        }
+        else if (characterName === "hulk") {
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=bruce-banner&resources=character";
+            $("#characterName").text("The Hulk");
+        }
+        else if (characterName === "hawkeye") {
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=clint-barton&resources=character";
+            $("#characterName").text("Hawkeye");
+        }
+        else if (characterName === "iron-man") {
+
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+            $("#characterName").text("Iron Man");
+        }
+        else if (characterName === "thor") {
+            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+            $("#characterName").text("Thor");
+
+        }
+        
 
         $.ajax({
-            url: marvelQueryURL,
-            method: 'GET'
+            url: comicVineQueryURL,
+            method: 'GET',
+            crossDomain: true,
+            dataType: 'json'
         }).then(function (response) {
             console.log(response);
 
         });
-    // });
 
-
-////
         });
         
-          // ====================
-            
-        // var imdbIDQueryURL = "http://www.omdbapi.com/?i=tt1483025&plot=full&apikey=f367c400";
-        //     // var imdbIDQueryURL = "http://www.omdbapi.com/?i=" + imdbID + "&plot=full&apikey=f367c400";
-        //     // console.log(imdbIDQueryURL);
-            
-
-        //     $.ajax({
-        //         url: imdbIDQueryURL,
-        //         method: 'GET'
-        //     }).then(function (response2) {
-        //         console.log(imdbID);
-                
-        //         console.log(imdbIDQueryURL);
-        //         console.log(response2);
-        //     });
-
-          // === uses the imdb ====
-
-          // Run seperate ajax call instead using the omdb URL with the imdbID to search 
-          // use the 
-          //imdb query url should look like this
-          
-          // Use the JSON object to present plot, rating, title, actors, etc...
-          // -- the syntax for these would be -> response.Title , response.Year , response.Rated ....
-          // working URL for example : http://www.omdbapi.com/?i=tt0800080&plot=full&apikey=f367c400
-
-        // ====================
-
-        // ===== DOM Manipulation =====
-            // $("#ratings").text(response.Rated);
-        // ====================
-        
-    
-
-    // $(".char").on("click", function () {
-    //     marvelCharacterName = $(this).attr("data-name");
-    //     console.log(marvelCharacterName);
-    //     var marvelQueryURL = "";
-
-    //     $.ajax({
-    //         url: marvelQueryURL,
-    //         method: 'GET'
-    //     }).then(function (response) {
-    //         console.log(response);
-
-    //     });
-    // });
+  
 
 });
 });

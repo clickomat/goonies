@@ -18,7 +18,16 @@
 /*Character Images*/
 .circle:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 0px 0px 15px #fff;
+    
+    -webkit-border-radius: -30px;
+    -moz-border-radius: -30px;
+    border-radius: -30px;
+    -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9,
+      0 0 30px #50a7e9, 0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
+    -moz-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9,
+      0 0 30px #50a7e9, 0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9, 0 0 30px #50a7e9,
+      0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
 }
 
 /* Character Page CSS */
@@ -53,7 +62,7 @@ body {
  .cartoon {
     max-width: 100%;
  }
-#CharacterName {
+#characterName {
     font-family: 'avengeance_heroic_avengerIt';
     font-size: 100px;
     color: #9A3838;
@@ -119,4 +128,11 @@ h5 {
     color: #E8F1EC;
     font-family: 'avengeance_heroic_avengerIt';
     letter-spacing: 2px;
+}
+
+.invisible {
+    display: none;
+}
+.dTeam{
+    margin: 2em;
 }
