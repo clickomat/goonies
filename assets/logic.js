@@ -141,28 +141,35 @@ $(document).ready(function () {
             if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
                 var comicVineQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=black%20widow%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Black Widow");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonBlackWidow.jpg");
+
 
         }
         else if (characterName === "captain-america") {
                 var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=captain%20america%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Captain America");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonCaptain.jpg");
         }
         else if (characterName === "hulk") {
                 var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hulk%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("The Hulk");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonHulk.jpg");
         }
         else if (characterName === "hawkeye") {
                 var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hawkeye%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Hawkeye");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonHawkeye.jpg");
         }
         else if (characterName === "iron-man") {
 
                 var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=iron%20man%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Iron Man");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonIronMan.jpg");
         }
         else if (characterName === "thor") {
                 var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=thor%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Thor");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonThor.jpg");
 
         }
         
