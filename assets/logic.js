@@ -1,18 +1,7 @@
 
 $(document).ready(function () {
 
-    // INFORMATION FOR SITE 
-    // 6 character
-    // Huklk, ironman, captain america, hawkeye, thor, black widdow
-
-    // http://www.omdbapi.com/?s=thor&year=2008&apikey=f367c400
-
-    // API/AJAX Test sections  
-
-    //OMDB Key = f367c400
-    //Marvel API Key = ded1811505155fd04255b903b7f0378a
-
-    // Sorting function/Algorithm
+        // ======== Sorting function/Algorithm ========
     function bubbleSort(arr) {
         var len = arr.length;
         for (var i = len - 1; i >= 0; i--) {
@@ -27,36 +16,28 @@ $(document).ready(function () {
         return arr;
     }
 
-    // these two variables will be set during the onclick event to whatever the items data-name attr is
+        // ======== Variables used for the first two API calls relating to OMDB ========
     var characterName = "";  
     var marvelCharacterName = "";
     var imdbID = "";
-    
 
-
-
+        // ==== When a character image is clicked on main screen ========
     $(".circle").on("click", function () {  
         
         characterName = $(this).attr("data-name");
-        console.log(characterName);
 
-        
-        
         if (characterName === "blackWidow") {
             characterName = "avengers_infinity_war";
-            
         }
 
         var OMDBQueryURL = "https://www.omdbapi.com/?s=" + characterName + "&year=2008&apikey=f367c400";
-         console.log(OMDBQueryURL);
+        // ====================
 
-        //AJAX Call
+        // ==== OMDB API call ========
         $.ajax({
             url: OMDBQueryURL,
             method: 'GET'
         }).then(function (response) {
-
-            console.log(response);
         
         // ===== This section sorts the movie respons years=====
             var yearArr = [];
@@ -68,7 +49,7 @@ $(document).ready(function () {
                 console.log(yearArr); 
                 }
             }
-            
+
             for (var j=0; j<yearArr.length; j++){
                 var yearToNum = parseInt(yearArr[j]);
                 yearIntArr.push(yearToNum);
@@ -76,32 +57,26 @@ $(document).ready(function () {
             }
 
             bubbleSort(yearIntArr);
-            console.log("bubble sorted" ,yearIntArr);
         // ====================
 
         // ==== looks to find most recent movie's IMDB ID ========
-            for (var x = 0; x < response.Search.length; x++) {
+        for (var x = 0; x < response.Search.length; x++) {
             var convertedYear = parseInt(response.Search[x].Year);
-           
             var yearAtEnd = yearIntArr[yearIntArr.length - 1]
-            
-            console.log(response.Search[x].Year)
-            console.log(convertedYear, "==", yearIntArr[yearIntArr.length-1])
+           
             if (convertedYear == yearIntArr[yearIntArr.length-1]) {
                 if (characterName === "hawkeye" || characterName === "blackWidow" || characterName === "avengers_infinity_war") {
                     imdbID = "tt4154756";
                 } else {
-                     imdbID = response.Search[x].imdbID;
-                console.log("imbd", imdbID);
+                    imdbID = response.Search[x].imdbID;
                 }
-               
             } else {
-                console.log("error");  
+                console.log("Error");  
             }
-       
-            
         }
+        // ====================
 
+        // ==== Sets Variable to the IMDB ID and runs API call using the variable ========
           var imdbIDQueryURL = "https://www.omdbapi.com/?i="+imdbID+"&plot=full&apikey=f367c400";
            
             $.ajax({
@@ -123,62 +98,54 @@ $(document).ready(function () {
                     movieRating = response2.Ratings[0].Source + " - " + response2.Ratings[0].Value;
                 }
 
-                console.log(imdbID);
-
-                console.log(imdbIDQueryURL);
-                console.log(response2);
-
                 $("#currentMovieTitle").text(response2.Title);
                 $("#currentMovieRelease").text(response2.Released);
                 $("#currentMovieRating").text(movieRating);
                 $("#currentMoviePlot").text(response2.Plot);
-                // $("#characterName").text("characterName");
-                // $("#characterName").html("characterName");
-
             });
 
-            console.log(marvelCharacterName);
-            if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
-                var comicVineQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=black%20widow%20comic&limit=3&namespace=0&format=json";
+        // ====================
+
+        // ==== Sets Variable to for the Wikipdia API call and changes Page Title/Character Image ========
+        if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
+            var comicVineQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=black%20widow%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Black Widow");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonBlackWidow.jpg");
+            $("#characterTopImage").attr("src", "./assets/images/CartoonBlackWidow.jpg");
 
 
         }
         else if (characterName === "captain-america") {
-                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=captain%20america%20comic&limit=3&namespace=0&format=json";
+            var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=captain%20america%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Captain America");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonCaptain.jpg");
+            $("#characterTopImage").attr("src", "./assets/images/CartoonCaptain.jpg");
         }
         else if (characterName === "hulk") {
-                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hulk%20comic&limit=3&namespace=0&format=json";
+            var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hulk%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("The Hulk");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonHulk.jpg");
+            $("#characterTopImage").attr("src", "./assets/images/CartoonHulk.jpg");
         }
         else if (characterName === "hawkeye") {
-                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hawkeye%20comic&limit=3&namespace=0&format=json";
+            var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hawkeye%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Hawkeye");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonHawkeye.jpg");
+            $("#characterTopImage").attr("src", "./assets/images/CartoonHawkeye.jpg");
         }
         else if (characterName === "iron-man") {
-
-                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=iron%20man%20comic&limit=3&namespace=0&format=json";
+            var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=iron%20man%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Iron Man");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonIronMan.jpg");
+            $("#characterTopImage").attr("src", "./assets/images/CartoonIronMan.jpg");
         }
         else if (characterName === "thor") {
-                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=thor%20comic&limit=3&namespace=0&format=json";
+            var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=thor%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Thor");
-                $("#characterTopImage").attr("src", "./assets/images/CartoonThor.jpg");
-
+            $("#characterTopImage").attr("src", "./assets/images/CartoonThor.jpg");
         }
-        
+        // ====================
+
+        // ==== Wikipedia API Call ========
         $.ajax({
             url: wikipediaQueryURL,
             method: 'GET',
         }).then(function (response) {
-            console.log(response);
-            console.log(response[1][1]);
             var wikiButtons = $("<div>");
             $("#wikiAPILink").html(wikiButtons);
             for (i=0; i<3; i++) {
@@ -187,12 +154,11 @@ $(document).ready(function () {
                     var responseLink = response[3][i];
                     $(wikiButtons).append("<a href=" + responseLink + " targert='blank'><button>" + responseLinkTitle + "</button></a>");
                 }
-     
             }
         });
-
         });
         
+        // ==== Switches screen displays for main/character pages (this allows API data to not be lost) ========
         $("#backToHome").on("click", function() {
             $("#charPG").addClass("invisible");
             $("#homePG").removeClass("invisible");
