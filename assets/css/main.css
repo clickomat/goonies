@@ -30,13 +30,31 @@
       0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
 }
 
+
+
+/* Character Page CSS */
+/* Production Page CSS */
 img.alt-page-links {
     height: auto;
     max-width: 90px;
 }
 
+#marvelSuperherosProdPG {
+    height: 85px;
+    max-width: 130px;
+    float: right;
+}
 
-/* Character Page CSS */
+#marvelSuperherosIndexPG {
+    height: 120px;
+    max-width: 160px;
+    float: right;
+}
+
+.page-links {
+    margin: 2%;
+}
+/* Production Page CSS */
 /* Setting Up Downloaded Fonts */
 @font-face {
     font-family: 'comic_bookitalic';
