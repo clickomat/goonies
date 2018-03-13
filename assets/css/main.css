@@ -136,3 +136,26 @@ h5 {
 .dTeam{
     margin: 2em;
 }
+
+@media only screen and (min-width: 1280px) {
+    .row .col.pull-l2 {
+        padding-top: 1.5%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col.pull-l2 {
+        padding-top: 1.5%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .BackToHome {
+        height: 189.2px;
+        width: 189.2px;
+    }
+    .cartoon {
+        height: 189.2px;
+        width: 189.2px;
+    }
+}
