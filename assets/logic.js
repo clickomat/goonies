@@ -139,46 +139,64 @@ $(document).ready(function () {
 
             console.log(marvelCharacterName);
             if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=natasha-romanoff&resources=character";
+                var comicVineQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=black%20widow%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Black Widow");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonBlackWidow.jpg");
+
 
         }
         else if (characterName === "captain-america") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=steve-rogers&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=captain%20america%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Captain America");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonCaptain.jpg");
         }
         else if (characterName === "hulk") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=bruce-banner&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hulk%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("The Hulk");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonHulk.jpg");
         }
         else if (characterName === "hawkeye") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=clint-barton&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hawkeye%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Hawkeye");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonHawkeye.jpg");
         }
         else if (characterName === "iron-man") {
 
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=iron%20man%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Iron Man");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonIronMan.jpg");
         }
         else if (characterName === "thor") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=thor%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Thor");
+                $("#characterTopImage").attr("src", "./assets/images/CartoonThor.jpg");
 
         }
         
-
         $.ajax({
-            url: comicVineQueryURL,
+            url: wikipediaQueryURL,
             method: 'GET',
-            crossDomain: true,
-            dataType: 'json'
         }).then(function (response) {
             console.log(response);
-
+            console.log(response[1][1]);
+            var wikiButtons = $("<div>");
+            $("#wikiAPILink").html(wikiButtons);
+            for (i=0; i<3; i++) {
+                if (response[1][i] !== undefined) {
+                    var responseLinkTitle = response[1][i];
+                    var responseLink = response[3][i];
+                    $(wikiButtons).append("<a href=" + responseLink + " targert='blank'><button>" + responseLinkTitle + "</button></a>");
+                }
+     
+            }
         });
 
         });
         
+        $("#backToHome").on("click", function() {
+            $("#charPG").addClass("invisible");
+            $("#homePG").removeClass("invisible");
+        })
   
 
 });
