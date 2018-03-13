@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<!-- this will be the production and coding teams credit site -->
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Avengers Assembler</title>
 
     <link rel="stylesheet" href="assets/materialize/materialize/css/materialize.min.css">
@@ -21,3 +25,100 @@
 
 </body>
 </html>
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- materialize -->
+    <link rel="stylesheet" href="assets/materialize/materialize/css/materialize.min.css">
+    <!-- mine ours ours -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <body class="mainBody">
+        <div id="homePG"></div>
+        <header class="mdl-mini-header">
+            <br>
+            <br>
+            <br>
+        </header>
+
+        <div class="controls">
+            left right left right up down up down
+        </div>
+        <div class="game">
+            <iframe src="http://www.retrogames.cc/embed/9096-marvel-super-heroes-951024-usa.html" width="600" height="450" frameborder="no"
+                allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
+
+        </div>
+
+        <div class="playerInfo col l6 s12">
+            <img src="./assets/images/captcha.png" alt="verify">
+            <form>
+                <input type="text" id="verify" placeholder="verify the picture above">
+                <input type="text" id="name-add" placeholder="Name">
+                <input type="text" id="score-add" placeholder="Score">
+                <input type="date" id="date-add" placeholder="Date">
+                <input type="email" id="email-add" placeholder="email">
+                <input type="button" class="addScore" value="Add Row" id="player">
+            </form>
+
+        </div>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+
+                    <div class="score col l6 offset-l2 s12">
+                        <h5 class="white-text">High Score</h5>
+                        <table class="striped">
+                            <tr>
+                                <th class="table-head" id="name">Name</th>
+                                <th class="table-head" id="score">Score</th>
+                                <th class="table-head" id="date">Date</th>
+                            </tr>
+                            <tr>
+                                <td>Alan</td>
+                                <td>eleventeen</td>
+                                <td>13/11/16</td>
+                            </tr>
+
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <a href="production.html">
+                    <img src="./assets/images/goonies.png" alt="goonies link" href="index.html" style="height:4em;">
+                  </a>
+            <div class="footer-copyright">
+                    
+                    <div class="container">
+                            © 2018 Goonoonies.  All other copywriten proprety used for educational purposes only.
+                            <a class="grey-text text-lighten-4 right" href="game.html">Game...</a>
+                        </div>
+                    <div class="footer-copyright">
+                           
+                        </div>
+                <div class="container">
+                    © 2018 marvel
+                    <a class="grey-text text-lighten-4 right" href="index.html">HOME...</a>
+                </div>
+            </div>
+            
+        </footer>
+
+
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+        <script src="game.js"></script>
+    </body>
+
+</html>
+

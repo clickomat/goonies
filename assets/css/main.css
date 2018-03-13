@@ -1,4 +1,3 @@
-
 /*Main Page CSS*/
 .container {
     display: table;
@@ -19,7 +18,16 @@
 /*Character Images*/
 .circle:hover {
     transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-    box-shadow: 0px 0px 15px #fff;
+    
+    -webkit-border-radius: -30px;
+    -moz-border-radius: -30px;
+    border-radius: -30px;
+    -webkit-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9,
+      0 0 30px #50a7e9, 0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
+    -moz-box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9,
+      0 0 30px #50a7e9, 0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #50a7e9, 0 0 30px #50a7e9,
+      0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
 }
 
 /* Character Page CSS */
@@ -124,4 +132,31 @@ h5 {
 
 .invisible {
     display: none;
+}
+/* goonies link */
+.dTeam{
+    margin: 2em;
+}
+
+@media only screen and (min-width: 1280px) {
+    .row .col.pull-l2 {
+        padding-top: 1.5%;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    .row .col.pull-l2 {
+        padding-top: 1.5%;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    .BackToHome {
+        height: 189.2px;
+        width: 189.2px;
+    }
+    .cartoon {
+        height: 189.2px;
+        width: 189.2px;
+    }
 }
