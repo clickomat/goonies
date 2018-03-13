@@ -137,6 +137,13 @@ h5 {
 .dTeam{
     margin: 2em;
 }
+@media (max-width:700px) {
+    
+    .mediaCol {
+        position:absolute;
+        display: inline-block;
+    };
+}
 
 @media only screen and (min-width: 1280px) {
     .row .col.pull-l2 {
@@ -160,3 +167,4 @@ h5 {
         width: 189.2px;
     }
 }
+
