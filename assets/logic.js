@@ -139,52 +139,57 @@ $(document).ready(function () {
 
             console.log(marvelCharacterName);
             if (characterName === "blackWidow" || characterName === "avengers_infinity_war") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=natasha-romanoff&resources=character";
+                var comicVineQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=black%20widow%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Black Widow");
 
         }
         else if (characterName === "captain-america") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=steve-rogers&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=captain%20america%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Captain America");
         }
         else if (characterName === "hulk") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=bruce-banner&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hulk%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("The Hulk");
         }
         else if (characterName === "hawkeye") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=clint-barton&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=hawkeye%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Hawkeye");
         }
         else if (characterName === "iron-man") {
 
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=anthony-edward-stark&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=iron%20man%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Iron Man");
         }
         else if (characterName === "thor") {
-            var comicVineQueryURL = "https://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character";
+                var wikipediaQueryURL = "https://en.wikipedia.org/w/api.php?action=opensearch&search=thor%20comic&limit=3&namespace=0&format=json";
             $("#characterName").text("Thor");
 
         }
         
-            var script = document.createElement('script');
-
-            script.src = 'http://comicvine.gamespot.com/api/search/?api_key=e526edc540369ef498dc63ec7fc899e35658beba&format=json&query=thor&resources=character';
-            var thisthing = document.getElementsByTagName('head')[0].appendChild(script);
-            console.log(toString(thisthing));
-
         $.ajax({
-            url: comicVineQueryURL,
+            url: wikipediaQueryURL,
             method: 'GET',
-            jsonp: "callback",
-            crossDomain: true,
-            dataType: 'jsonp'
         }).then(function (response) {
             console.log(response);
-
+            console.log(response[1][1]);
+            var wikiButtons = $("<div>");
+            $("#wikiAPILink").html(wikiButtons);
+            for (i=0; i<3; i++) {
+                if (response[1][i] !== undefined) {
+                    var responseLinkTitle = response[1][i];
+                    var responseLink = response[3][i];
+                    $(wikiButtons).append("<a href=" + responseLink + " targert='blank'><button>" + responseLinkTitle + "</button></a>");
+                }
+     
+            }
         });
 
         });
         
+        $("#backToHome").on("click", function() {
+            $("#charPG").addClass("invisible");
+            $("#homePG").removeClass("invisible");
+        })
   
 
 });
