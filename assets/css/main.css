@@ -50,9 +50,15 @@ img.alt-page-links {
     max-width: 160px;
     float: right;
 }
+#avengersIndexLink {
+    height: 100px;
+    max-width: 120px;
+    float: right;
+}
 
 .page-links {
-    margin: 2%;
+    display: flex;
+    justify-content: space-evenly;
 }
 /* Production Page CSS */
 /* Setting Up Downloaded Fonts */
