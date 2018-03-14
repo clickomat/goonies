@@ -16,57 +16,60 @@
     <link rel="stylesheet" href="assets/css/main.css">
 
     <script src="game.js"></script>
-    <link rel="stylesheet" href="./assets/style.css">
-</head>
-
-<body>
     
-
-
-</body>
-</html>
-
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <!-- Sweet Alert CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <!-- materialize -->
     <link rel="stylesheet" href="assets/materialize/materialize/css/materialize.min.css">
     <!-- mine ours ours -->
     <link rel="stylesheet" href="assets/css/main.css">
-
-
-    <title>Document</title>
+    <!-- Firebase link -->
+    <script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
 </head>
 
 <body>
 
 
-    <body class="mainBody">
+    <body class="mainBody game-page-style">
         <div id="homePG"></div>
         <header class="mdl-mini-header">
             <br>
             <br>
             <br>
         </header>
+        <div id="game-console">
+            <div class="text" id="gameControls">
+                <p>Move: Keyboard Arrow Keys</p>
+                <p>Select: Keyboard Shift</p>
+                <p>Start: Keyboard Return</p>
+                <p>A: Keyboard Z</p>
+                <p>B: Keyboard X</p>
+                <p>X: Keyboard A</p>
+                <p>Y: Keyboard S</p>
+                <p>L: Keyboard Q</p>
+                <p>R: Keyboard E</p>
+                <p>L1: Keyboard R</p>
+                <p>L2: Keyboard T</p>
+            </div>
+            <div class="game">
+                <iframe src="https://www.retrogames.cc/embed/9096-marvel-super-heroes-951024-usa.html" width="1280" height="720" frameborder="no"
+                    allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
 
-        <div class="controls">
-            left right left right up down up down
-        </div>
-        <div class="game">
-            <iframe src="http://www.retrogames.cc/embed/9096-marvel-super-heroes-951024-usa.html" width="600" height="450" frameborder="no"
-                allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" scrolling="no"></iframe>
-
+            </div>
         </div>
 
         <div class="playerInfo col l6 s12">
             <img src="./assets/images/captcha.png" alt="verify">
-            <form>
-                <input type="text" id="verify" placeholder="verify the picture above">
-                <input type="text" id="name-add" placeholder="Name">
-                <input type="text" id="score-add" placeholder="Score">
-                <input type="date" id="date-add" placeholder="Date">
-                <input type="email" id="email-add" placeholder="email">
-                <input type="button" class="addScore" value="Add Row" id="player">
+            <form id="scoreboardForm">
+                <input type="text" id="verify" placeholder="verify the picture above" required>
+                <input type="text" id="name-add" placeholder="Name" required>
+                <input type="text" id="score-add" placeholder="Score" required>
+                <input type="date" id="date-add" placeholder="Date" required>
+                <input type="email" id="email-add" placeholder="email" required>
+                <span id="submit-button-style"><input type="submit" class="addScore" value="Add Row" id="player"></span>
             </form>
 
         </div>
@@ -74,7 +77,7 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="score col l6 offset-l2 s12">
+                    <div class="playerInfo col l12 s12">
                         <h5 class="white-text">High Score</h5>
                         <table class="striped">
                             <tr>
