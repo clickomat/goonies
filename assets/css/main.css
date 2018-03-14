@@ -133,6 +133,11 @@ hr {
 }
 
 /* wiki dynamic button styling */
+.wiki-button-style {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2% auto;
+}
 /*  */
 
 /* Comic Books Section */
