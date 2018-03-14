@@ -152,7 +152,7 @@ $(document).ready(function () {
                 if (response[1][i] !== undefined) {
                     var responseLinkTitle = response[1][i];
                     var responseLink = response[3][i];
-                    $(wikiButtons).append("<a href=" + responseLink + " target='_blank'><button>" + responseLinkTitle + "</button></a>");
+                    $(wikiButtons).append("<a href=" + responseLink + " target='_blank' class='wiki-button-style'><button>" + responseLinkTitle + "</button></a>");
                 }
             }
         });
