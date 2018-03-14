@@ -32,9 +32,6 @@
       0 0 40px #50a7e9, 0 0 55px #50a7e9, 0 0 75px #50a7e9;
 }
 
-
-
-/* Character Page CSS */
 /* Production Page CSS */
 img.alt-page-links {
     height: auto;
@@ -91,6 +88,8 @@ img.alt-page-links {
     color: white;
 }
 /* game page */
+
+/* Character Page CSS */
 /* Whole Body */
 body {
     background-color: #2d2d2e;
@@ -139,6 +138,18 @@ hr {
 /* Comic Books Section */
 .comicbooks {
     background-color: #E5C85F;
+}
+#ComicsTitle {
+    text-align: center;
+}
+#comictext {
+    color: #2d2d2e;
+}
+#comictext:hover {
+    text-decoration: underline;
+}
+#comiclinks {
+    text-align: center;
 }
 
 /* Character Bio Section */
