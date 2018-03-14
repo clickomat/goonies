@@ -1,3 +1,5 @@
+
+
 /*Main Page CSS*/
 .container {
     display: table;
@@ -77,6 +79,18 @@ img.alt-page-links {
     font-style: normal;
 }
 
+
+/* game page */
+
+.game{
+    display: flex;
+    justify-content: center;
+}
+.playerInfo {
+    margin: 2%;
+    color: white;
+}
+/* game page */
 /* Whole Body */
 body {
     background-color: #2d2d2e;
@@ -118,6 +132,9 @@ body {
 hr {
     border-color: #2d2d2e;
 }
+
+/* wiki dynamic button styling */
+/*  */
 
 /* Comic Books Section */
 .comicbooks {
@@ -166,6 +183,47 @@ h5 {
 /* goonies link */
 .dTeam{
     margin: 2em;
+}
+
+/* game controls div */
+#game-console {
+    display: flex;
+    justify-content: center;
+    
+    /* border: 2px solid white; */
+
+}
+#gameControls {
+    margin: auto 10px;
+    padding: 10px;
+    height: auto;
+    width: 189.2px;
+    border: 2px solid white;
+
+}
+
+
+#submit-button-style {
+    color: black;
+}
+
+.page-footer{
+    background-color: #9A3838;
+    color: black;
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    color: black;
+}
+
+/* end */
+
+@media (max-width:700px) {
+    
+    .mediaCol {
+        position:absolute;
+        display: inline-block;
+    };
 }
 
 @media only screen and (min-width: 1280px) {
