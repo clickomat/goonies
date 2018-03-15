@@ -115,6 +115,9 @@ body {
 .homebutton {
     height: 100%;
 }
+.BackToHome:hover {
+    filter: brightness(75%);
+}
 .BackToHome {
     max-width: 100%;
 }
